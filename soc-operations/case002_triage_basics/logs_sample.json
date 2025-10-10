@@ -1,0 +1,7 @@
+
+[
+    {"timestamp": "2025-10-08T09:15:00Z", "event": "User login", "user": "admin", "source_ip": "10.0.0.5", "status": "SUCCESS"},
+    {"timestamp": "2025-10-08T09:20:00Z", "event": "User login", "user": "guest", "source_ip": "91.184.33.14", "status": "FAILED"},
+    {"timestamp": "2025-10-08T09:22:00Z", "event": "File accessed", "file": "/etc/shadow", "user": "guest"},
+    {"timestamp": "2025-10-08T09:25:00Z", "event": "Process started", "process": "powershell.exe", "user": "guest"}
+  ]

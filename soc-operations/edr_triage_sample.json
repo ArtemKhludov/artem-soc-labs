@@ -1,0 +1,102 @@
+{
+  "source": "EDR System",
+  "collection_time": "2024-10-08T10:30:00Z",
+  "total_events": 8,
+  "events": [
+    {
+      "event_id": "evt-001",
+      "timestamp": "2024-10-08T10:15:23Z",
+      "event_type": "process_creation",
+      "hostname": "WS-FINANCE-01",
+      "user": "john.doe",
+      "process_name": "excel.exe",
+      "command_line": "C:\\Program Files\\Microsoft Office\\Excel.exe document.xlsx",
+      "parent_process": "explorer.exe",
+      "severity": "low",
+      "details": "Normal user activity - opening Excel document"
+    },
+    {
+      "event_id": "evt-002",
+      "timestamp": "2024-10-08T10:16:45Z",
+      "event_type": "process_creation",
+      "hostname": "WS-FINANCE-01",
+      "user": "john.doe",
+      "process_name": "powershell.exe",
+      "command_line": "powershell.exe -ExecutionPolicy Bypass -EncodedCommand BASE64STRING",
+      "parent_process": "excel.exe",
+      "severity": "critical",
+      "details": "ALERT: Suspicious PowerShell execution with encoded command from Office application"
+    },
+    {
+      "event_id": "evt-003",
+      "timestamp": "2024-10-08T10:17:01Z",
+      "event_type": "network_connection",
+      "hostname": "WS-FINANCE-01",
+      "user": "john.doe",
+      "process_name": "powershell.exe",
+      "destination_ip": "185.220.101.45",
+      "destination_port": 443,
+      "severity": "high",
+      "details": "Suspicious outbound connection to known malicious IP"
+    },
+    {
+      "event_id": "evt-004",
+      "timestamp": "2024-10-08T10:17:15Z",
+      "event_type": "file_creation",
+      "hostname": "WS-FINANCE-01",
+      "user": "SYSTEM",
+      "process_name": "svchost.exe",
+      "file_path": "C:\\Windows\\Temp\\update.exe",
+      "file_hash": "a1b2c3d4e5f6789012345678901234567890abcd",
+      "severity": "medium",
+      "details": "File created in temp directory by system process"
+    },
+    {
+      "event_id": "evt-005",
+      "timestamp": "2024-10-08T10:18:30Z",
+      "event_type": "registry_modification",
+      "hostname": "WS-FINANCE-01",
+      "user": "john.doe",
+      "process_name": "update.exe",
+      "registry_key": "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "registry_value": "SecurityUpdate",
+      "severity": "critical",
+      "details": "ALERT: Malware persistence mechanism - autorun registry key created"
+    },
+    {
+      "event_id": "evt-006",
+      "timestamp": "2024-10-08T10:20:00Z",
+      "event_type": "process_creation",
+      "hostname": "WS-HR-05",
+      "user": "sarah.admin",
+      "process_name": "chrome.exe",
+      "command_line": "chrome.exe https://company.sharepoint.com",
+      "parent_process": "explorer.exe",
+      "severity": "low",
+      "details": "Normal browser activity"
+    },
+    {
+      "event_id": "evt-007",
+      "timestamp": "2024-10-08T10:22:15Z",
+      "event_type": "authentication",
+      "hostname": "DC-01",
+      "user": "admin",
+      "source_ip": "10.10.10.50",
+      "auth_result": "failed",
+      "severity": "medium",
+      "details": "Failed authentication attempt - incorrect password"
+    },
+    {
+      "event_id": "evt-008",
+      "timestamp": "2024-10-08T10:25:00Z",
+      "event_type": "process_creation",
+      "hostname": "WS-FINANCE-01",
+      "user": "john.doe",
+      "process_name": "mimikatz.exe",
+      "command_line": "mimikatz.exe sekurlsa::logonpasswords",
+      "parent_process": "cmd.exe",
+      "severity": "critical",
+      "details": "ALERT: Credential dumping tool detected - immediate response required"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Logs (except demo/sample logs)
+*.log
+!incident-response/logs/*.log
+
+# AI/System reports
+*report*.json
+*audit*.json
+*summary*.json
+FINAL_*.json
+
+# Temporary files
+*.tmp
+
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Virtual machines
+*.ova
+*.vmdk
+*.vdi
+
+# Large files
+*.pcap
+*.cap
+*.dmp
+
+# Secrets and keys
+*.key
+*.pem
+*.crt
+secrets/
+

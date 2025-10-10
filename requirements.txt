@@ -1,0 +1,25 @@
+# Python dependencies for artem-soc-labs
+
+# Core libraries
+requests==2.31.0
+python-dateutil==2.8.2
+
+# Data analysis
+pandas==2.1.1
+numpy==1.26.0
+
+# Network & Security
+scapy==2.5.0
+python-nmap==0.7.1
+
+# JSON & Data parsing
+pyyaml==6.0.1
+
+# Logging & Monitoring
+colorama==0.4.6
+
+# Future additions (commented for now)
+# yara-python==4.3.1  # Malware detection
+# volatility3==2.5.0  # Memory forensics
+# pefile==2023.2.7    # PE file analysis
+
