@@ -1,0 +1,100 @@
+{
+  "timestamp": "2025-01-12T12:00:00Z",
+  "host": "mac.local",
+  "source": "/tmp/test_simple.log",
+  "sourcetype": "syslog",
+  "index": "main",
+  "event": "TEST: Sun Jan 12 12:00:00 PST 2025 - Validation entry",
+  "severity": "info",
+  "category": "test"
+}
+{
+  "timestamp": "2025-01-12T12:01:00Z",
+  "host": "mac.local",
+  "source": "/var/log/splunk_test.log",
+  "sourcetype": "syslog",
+  "index": "main",
+  "event": "DIRECT TEST: Sun Jan 12 12:01:00 PST 2025 - Testing direct file creation",
+  "severity": "info",
+  "category": "test"
+}
+{
+  "timestamp": "2025-01-12T12:02:00Z",
+  "host": "mac.local",
+  "source": "/Applications/SplunkForwarder/var/log/splunk/splunkd.log",
+  "sourcetype": "splunkd",
+  "index": "_internal",
+  "event": "ERROR: Cooked connection to ip=127.0.0.1:9997 timed out",
+  "severity": "error",
+  "category": "connection"
+}
+{
+  "timestamp": "2025-01-12T12:03:00Z",
+  "host": "mac.local",
+  "source": "/Applications/SplunkForwarder/var/log/splunk/splunkd.log",
+  "sourcetype": "splunkd",
+  "index": "_internal",
+  "event": "ERROR: TCP output processor has paused the data flow",
+  "severity": "error",
+  "category": "connection"
+}
+{
+  "timestamp": "2025-01-12T12:04:00Z",
+  "host": "mac.local",
+  "source": "/Applications/SplunkForwarder/var/log/splunk/splunkd.log",
+  "sourcetype": "splunkd",
+  "index": "_internal",
+  "event": "INFO: Successfully connected to indexer at 127.0.0.1:9998",
+  "severity": "info",
+  "category": "connection"
+}
+{
+  "timestamp": "2025-01-12T12:05:00Z",
+  "host": "mac.local",
+  "source": "/tmp/test_simple.log",
+  "sourcetype": "syslog",
+  "index": "main",
+  "event": "SUCCESS TEST: Sun Jan 12 12:05:00 PST 2025 - Data should flow now!",
+  "severity": "info",
+  "category": "test"
+}
+{
+  "timestamp": "2025-01-12T12:06:00Z",
+  "host": "mac.local",
+  "source": "/Applications/Splunk/var/log/splunk/splunkd.log",
+  "sourcetype": "splunkd",
+  "index": "_internal",
+  "event": "INFO: Successfully received data from forwarder at 127.0.0.1",
+  "severity": "info",
+  "category": "connection"
+}
+{
+  "timestamp": "2025-01-12T12:07:00Z",
+  "host": "mac.local",
+  "source": "/var/log/system.log",
+  "sourcetype": "syslog",
+  "index": "main",
+  "event": "kernel: TCP connection established from 127.0.0.1:9998",
+  "severity": "info",
+  "category": "network"
+}
+{
+  "timestamp": "2025-01-12T12:08:00Z",
+  "host": "mac.local",
+  "source": "/Applications/SplunkForwarder/var/log/splunk/splunkd.log",
+  "sourcetype": "splunkd",
+  "index": "_internal",
+  "event": "INFO: File descriptor cache is full - cleaning up",
+  "severity": "warning",
+  "category": "performance"
+}
+{
+  "timestamp": "2025-01-12T12:09:00Z",
+  "host": "mac.local",
+  "source": "/tmp/test_simple.log",
+  "sourcetype": "syslog",
+  "index": "main",
+  "event": "FINAL TEST: Sun Jan 12 12:09:00 PST 2025 - Architecture validation complete",
+  "severity": "info",
+  "category": "test"
+}
