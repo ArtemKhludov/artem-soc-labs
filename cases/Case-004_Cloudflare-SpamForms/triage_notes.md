@@ -98,21 +98,21 @@ rate_limit:
 ## Response Actions
 
 ### Immediate (0-15 min)
-- [x] Analyzed Cloudflare logs using Logpull API
-- [x] Identified attack patterns and source infrastructure
-- [x] Confirmed direct API access bypassing website forms
+- [x] I analyzed Cloudflare logs using Logpull API
+- [x] I identified attack patterns and source infrastructure
+- [x] I confirmed direct API access bypassing website forms
 
 ### Short-term (15-30 min)
-- [x] Implemented WAF rules blocking missing headers
-- [x] Deployed rate limiting (3 requests per 10 seconds)
-- [x] Enabled Cloudflare Bot Management (Super Bot Fight Mode)
-- [x] Activated Cloudflare Turnstile on form endpoints
+- [x] I implemented WAF rules blocking missing headers
+- [x] I deployed rate limiting (3 requests per 10 seconds)
+- [x] I enabled Cloudflare Bot Management (Super Bot Fight Mode)
+- [x] I activated Cloudflare Turnstile on form endpoints
 
 ### Long-term (30-60 min)
-- [x] Fine-tuned rules based on false positive analysis
-- [x] Implemented JA3/TLS fingerprint analysis
-- [x] Set up continuous monitoring and alerting
-- [x] Documented IOCs and response procedures
+- [x] I fine-tuned rules based on false positive analysis
+- [x] I implemented JA3/TLS fingerprint analysis
+- [x] I set up continuous monitoring and alerting
+- [x] I documented IOCs and response procedures
 
 ## Root Cause Analysis
 
@@ -124,15 +124,15 @@ rate_limit:
 
 ## Lessons Learned
 
-**What worked:**
-- Cloudflare Logpull API provided excellent visibility into attack patterns
+**Successful actions:**
+- Cloudflare Logpull API gave me excellent visibility into attack patterns
 - WAF rules effectively blocked automated traffic
 - Bot Management accurately identified bot behavior
 - Turnstile provided better user experience than traditional CAPTCHA
 
-**What needs improvement:**
+**Areas for improvement:**
 - Initial rules were too restrictive for corporate VPNs
-- Need better false positive monitoring
+- I need better false positive monitoring
 - Should implement behavioral analysis earlier
 - Need automated IOC sharing with threat intelligence
 
@@ -187,10 +187,10 @@ rate_limit:
 
 ## Follow-up Actions
 
-- [ ] Weekly review of Cloudflare analytics
-- [ ] Monthly rule tuning based on traffic patterns
-- [ ] Quarterly security assessment of form endpoints
-- [ ] Annual penetration testing of form security
+- [ ] I will conduct weekly review of Cloudflare analytics
+- [ ] I will perform monthly rule tuning based on traffic patterns
+- [ ] I will conduct quarterly security assessment of form endpoints
+- [ ] I will arrange annual penetration testing of form security
 
 **Reported to:** Security Manager, Marketing Team, CISO  
 **Follow-up required:** 30-day review of Bot Management effectiveness  

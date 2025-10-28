@@ -223,5 +223,4 @@ action: block
 - [Cloudflare Bot Management](https://developers.cloudflare.com/bots/)
 - [Cloudflare WAF Rules](https://developers.cloudflare.com/waf/)
 
-_Mapped by: Artem Khludov, SOC Analyst_  
 _Date: 2025-10-28_

@@ -286,4 +286,4 @@ Spam Form Alert
 - [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/)
 - [MITRE ATT&CK - T1499](https://attack.mitre.org/techniques/T1499/)
 
-Used in ~5 incidents. Avg response time ~25 min. Applied to Case-004 on 2025-10-28 (response: 30 min).
+Applied to Case-004 on 2025-10-28 (response: 30 min).
