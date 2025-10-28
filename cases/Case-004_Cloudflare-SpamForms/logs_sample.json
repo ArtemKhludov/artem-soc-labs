@@ -1,0 +1,291 @@
+[
+  {
+    "RayID": "7f8a9b2c3d4e5f6a",
+    "EdgeStartTimestamp": "2025-10-28T10:15:23Z",
+    "ClientIP": "185.220.101.45",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "python-requests/2.28.1",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "python-requests/2.28.1"
+    },
+    "BotScore": 15,
+    "ASN": 14061,
+    "Country": "RU",
+    "Action": "blocked",
+    "RuleID": "block_spam_forms_missing_headers"
+  },
+  {
+    "RayID": "8f9a0b1c2d3e4f5a",
+    "EdgeStartTimestamp": "2025-10-28T10:15:25Z",
+    "ClientIP": "185.220.101.45",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "python-requests/2.28.1",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "python-requests/2.28.1"
+    },
+    "BotScore": 15,
+    "ASN": 14061,
+    "Country": "RU",
+    "Action": "blocked",
+    "RuleID": "block_spam_forms_missing_headers"
+  },
+  {
+    "RayID": "9f0a1b2c3d4e5f6a",
+    "EdgeStartTimestamp": "2025-10-28T10:15:27Z",
+    "ClientIP": "185.220.101.45",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "python-requests/2.28.1",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "python-requests/2.28.1"
+    },
+    "BotScore": 15,
+    "ASN": 14061,
+    "Country": "RU",
+    "Action": "blocked",
+    "RuleID": "block_spam_forms_missing_headers"
+  },
+  {
+    "RayID": "af1b2c3d4e5f6a7b",
+    "EdgeStartTimestamp": "2025-10-28T10:16:15Z",
+    "ClientIP": "192.168.1.100",
+    "ClientRequestURI": "/booking/schedule-meeting",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+    "ClientRequestReferer": "https://example.com/contact",
+    "ClientRequestOrigin": "https://example.com",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+      "Referer": "https://example.com/contact",
+      "Origin": "https://example.com",
+      "Cookie": "session_id=abc123; cf_turnstile_token=valid_token_xyz"
+    },
+    "BotScore": 85,
+    "ASN": 12345,
+    "Country": "US",
+    "Action": "allowed",
+    "RuleID": "whitelist_legitimate_sources"
+  },
+  {
+    "RayID": "bf2c3d4e5f6a7b8c",
+    "EdgeStartTimestamp": "2025-10-28T10:17:30Z",
+    "ClientIP": "203.0.113.50",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "curl/7.68.0",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "curl/7.68.0"
+    },
+    "BotScore": 12,
+    "ASN": 9009,
+    "Country": "CN",
+    "Action": "managed_challenge",
+    "RuleID": "block_low_bot_score_requests"
+  },
+  {
+    "RayID": "cf3d4e5f6a7b8c9d",
+    "EdgeStartTimestamp": "2025-10-28T10:18:45Z",
+    "ClientIP": "198.51.100.25",
+    "ClientRequestURI": "/booking/schedule-meeting",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "Mozilla/5.0 (compatible; Bot/1.0)",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "Mozilla/5.0 (compatible; Bot/1.0)"
+    },
+    "BotScore": 8,
+    "ASN": 208091,
+    "Country": "RU",
+    "Action": "blocked",
+    "RuleID": "block_known_bot_user_agents"
+  },
+  {
+    "RayID": "df4e5f6a7b8c9d0e",
+    "EdgeStartTimestamp": "2025-10-28T10:19:12Z",
+    "ClientIP": "185.220.101.45",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "python-requests/2.28.1",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "python-requests/2.28.1"
+    },
+    "BotScore": 15,
+    "ASN": 14061,
+    "Country": "RU",
+    "Action": "rate_limited",
+    "RuleID": "form_submission_rate_limit"
+  },
+  {
+    "RayID": "ef5f6a7b8c9d0e1f",
+    "EdgeStartTimestamp": "2025-10-28T10:20:33Z",
+    "ClientIP": "192.168.1.150",
+    "ClientRequestURI": "/booking/schedule-meeting",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "ClientRequestReferer": "https://example.com/demo",
+    "ClientRequestOrigin": "https://example.com",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "Referer": "https://example.com/demo",
+      "Origin": "https://example.com",
+      "Cookie": "session_id=def456; cf_turnstile_token=valid_token_abc"
+    },
+    "BotScore": 92,
+    "ASN": 12345,
+    "Country": "US",
+    "Action": "allowed",
+    "RuleID": "whitelist_legitimate_sources"
+  },
+  {
+    "RayID": "ff6a7b8c9d0e1f2a",
+    "EdgeStartTimestamp": "2025-10-28T10:21:18Z",
+    "ClientIP": "203.0.113.75",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "wget/1.20.3",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "wget/1.20.3"
+    },
+    "BotScore": 18,
+    "ASN": 9009,
+    "Country": "CN",
+    "Action": "managed_challenge",
+    "RuleID": "block_known_bot_user_agents"
+  },
+  {
+    "RayID": "0f7a8b9c0d1e2f3a",
+    "EdgeStartTimestamp": "2025-10-28T10:22:45Z",
+    "ClientIP": "185.220.101.45",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "python-requests/2.28.1",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "python-requests/2.28.1"
+    },
+    "BotScore": 15,
+    "ASN": 14061,
+    "Country": "RU",
+    "Action": "blocked",
+    "RuleID": "block_vps_asns"
+  },
+  {
+    "RayID": "1f8a9b0c1d2e3f4a",
+    "EdgeStartTimestamp": "2025-10-28T10:23:12Z",
+    "ClientIP": "198.51.100.50",
+    "ClientRequestURI": "/booking/schedule-meeting",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+    },
+    "BotScore": 25,
+    "ASN": 208091,
+    "Country": "RU",
+    "Action": "managed_challenge",
+    "RuleID": "block_session_replay_attacks"
+  },
+  {
+    "RayID": "2f9a0b1c2d3e4f5a",
+    "EdgeStartTimestamp": "2025-10-28T10:24:30Z",
+    "ClientIP": "192.168.1.200",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+    "ClientRequestReferer": "https://example.com/contact",
+    "ClientRequestOrigin": "https://example.com",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+      "Referer": "https://example.com/contact",
+      "Origin": "https://example.com",
+      "Cookie": "session_id=ghi789; cf_turnstile_token=valid_token_def"
+    },
+    "BotScore": 88,
+    "ASN": 12345,
+    "Country": "US",
+    "Action": "allowed",
+    "RuleID": "whitelist_legitimate_sources"
+  },
+  {
+    "RayID": "3f0a1b2c3d4e5f6a",
+    "EdgeStartTimestamp": "2025-10-28T10:25:15Z",
+    "ClientIP": "203.0.113.100",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "python-requests/2.28.1",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "python-requests/2.28.1"
+    },
+    "BotScore": 15,
+    "ASN": 9009,
+    "Country": "CN",
+    "Action": "blocked",
+    "RuleID": "adaptive_bot_detection"
+  },
+  {
+    "RayID": "4f1a2b3c4d5e6f7a",
+    "EdgeStartTimestamp": "2025-10-28T10:26:42Z",
+    "ClientIP": "185.220.101.45",
+    "ClientRequestURI": "/calendly/book-demo",
+    "ClientRequestMethod": "POST",
+    "ClientRequestUserAgent": "python-requests/2.28.1",
+    "ClientRequestReferer": "",
+    "ClientRequestOrigin": "",
+    "ClientRequestHeaders": {
+      "Content-Type": "application/json",
+      "Accept": "*/*",
+      "User-Agent": "python-requests/2.28.1"
+    },
+    "BotScore": 15,
+    "ASN": 14061,
+    "Country": "RU",
+    "Action": "blocked",
+    "RuleID": "emergency_spam_block"
+  }
+]
