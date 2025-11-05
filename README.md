@@ -212,34 +212,42 @@ All playbooks follow NIST SP 800-61 framework
 ```
 artem-soc-labs/
 
- cases/                          # Real incident case studies
+ cases_cybersecurity/            # Real incident case studies
     Case-001_RDP-BruteForce/
     Case-002_PowerShell-EncodedCommand/
-    Case-003_Phishing-Investigation/
+    Case-003_Splunk-Integration-Failure/
+    Case-004_Cloudflare-SpamForms/
+    Case-005_Autopilot-Intune-Control/
 
- soc-operations/                 # SOC automation tools
+ cases_soc-operations/           # SOC automation and notes
     edr_triage.py
+    edr_triage_sample.json
+    case001_infra_setup.md
     case002_triage_basics/
+      logs_sample.json
+      triage_notes.md
+      triage_parser_v2.py
+    notes_summary.md
 
- vulnerability-management/       # Vuln assessment tools
-    cve_parser.py
-    nmap_scan_example.py
+ docs/                           # Guides and references
+    achievements.md
+    professional_development.md
+    splunk_cheatsheet.md
+    splunk_management_guide.md
+    tools_list.md
 
- incident-response/              # IR automation & playbooks
-    triage_script.py
-    incident_playbook.md
+ research-projects/              # CTF and research (kept with .gitkeep)
+    hackthebox_results/
+    tryhackme_notes/
+    wireshark_sessions/
 
- redteam-operations/             # Offensive security tools
-    recon_tools/
-
- detections/                     # Custom detection rules
-
- playbooks/                      # IR playbooks
-
- resume/                         # Professional experience
+ resume/
     experience_summary.md
 
- research-projects/              # CTF and research work
+ requirements.txt
+ SETUP.md
+ README.md
+ triage_parser.py
 ```
 
 ---
@@ -261,14 +269,10 @@ pip install -r requirements.txt
 
 ### Run EDR Triage Tool
 ```bash
-cd soc-operations
+cd cases_soc-operations
 python edr_triage.py
 ```
 
-### Run IR Triage Script
-```bash
-cd incident-response
-python triage_script.py --log-dir logs
 ```
 
  **[Full Setup Guide](SETUP.md)**
