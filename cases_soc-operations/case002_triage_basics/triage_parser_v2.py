@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 SOC Triage Parser v2.0
-Автоматический анализ логов на подозрительные события
+Automated log analysis for suspicious events
 """
 
 import json
@@ -9,21 +9,21 @@ import os
 from datetime import datetime
 
 def load_logs(filepath):
-    """Загрузка логов из JSON файла с проверкой ошибок"""
+    """Load logs from JSON file with error checking"""
     try:
         with open(filepath, 'r') as f:
             logs = json.load(f)
-        print(f"✅ Загружено {len(logs)} событий из {filepath}\n")
+        print(f"Loaded {len(logs)} events from {filepath}\n")
         return logs
     except FileNotFoundError:
-        print(f"❌ Ошибка: Файл {filepath} не найден!")
+        print(f"[ERROR] File {filepath} not found!")
         return []
     except json.JSONDecodeError:
-        print(f"❌ Ошибка: Файл {filepath} содержит некорректный JSON!")
+        print(f"[ERROR] File {filepath} contains invalid JSON!")
         return []
 
 def analyze_failed_logins(log):
-    """Анализ неудачных попыток входа"""
+    """Analyze failed login attempts"""
     if log.get("status") == "FAILED":
         return {
             "severity": "HIGH",
@@ -34,7 +34,7 @@ def analyze_failed_logins(log):
     return None
 
 def analyze_powershell(log):
-    """Детекция PowerShell активности"""
+    """Detect PowerShell activity"""
     process = log.get("process", "").lower()
     if "powershell" in process or "pwsh" in process:
         return {
@@ -46,7 +46,7 @@ def analyze_powershell(log):
     return None
 
 def analyze_sensitive_files(log):
-    """Детекция доступа к критичным файлам"""
+    """Detect access to critical files"""
     sensitive_files = ["/etc/shadow", "/etc/passwd", "SAM", "SYSTEM", ".ssh/id_rsa"]
     file_path = log.get("file", "")
     
@@ -61,10 +61,10 @@ def analyze_sensitive_files(log):
     return None
 
 def analyze_external_connections(log):
-    """Детекция подключений с внешних IP"""
+    """Detect connections from external IPs"""
     source_ip = log.get("source_ip", "")
     
-    # Проверка: не локальный IP
+    # Check: not a local IP
     if source_ip and not source_ip.startswith(("10.", "192.168.", "172.16.")):
         return {
             "severity": "MEDIUM",
@@ -76,24 +76,24 @@ def analyze_external_connections(log):
 
 def main():
     print("=" * 80)
-    print("🛡️  SOC TRIAGE PARSER v2.0")
+    print("SOC TRIAGE PARSER v2.0")
     print("=" * 80)
     print()
     
-    # Путь к файлу логов
+    # Log file path
     log_file = "logs_sample.json"
     
-    # Загрузка логов
+    # Load logs
     logs = load_logs(log_file)
     if not logs:
         return
     
-    # Список для хранения всех находок
+    # List to store all findings
     findings = []
     
-    # Анализ каждого события
+    # Analyze each event
     for log in logs:
-        # Запускаем все детекторы
+        # Run all detectors
         checks = [
             analyze_failed_logins(log),
             analyze_powershell(log),
@@ -101,56 +101,56 @@ def main():
             analyze_external_connections(log)
         ]
         
-        # Собираем все находки
+        # Collect all findings
         for finding in checks:
             if finding:
                 findings.append(finding)
     
-    # Вывод результатов
+    # Print results
     if findings:
-        print(f"🚨 Обнаружено {len(findings)} подозрительных событий:\n")
+        print(f"Found {len(findings)} suspicious events:\n")
         
-        # Группировка по серьезности
+        # Group by severity
         critical = [f for f in findings if f['severity'] == 'CRITICAL']
         high = [f for f in findings if f['severity'] == 'HIGH']
         medium = [f for f in findings if f['severity'] == 'MEDIUM']
         
         if critical:
-            print("🔴 CRITICAL:")
+            print("CRITICAL:")
             for f in critical:
                 print(f"   [{f['timestamp']}] {f['type']}: {f['details']}")
             print()
         
         if high:
-            print("🟠 HIGH:")
+            print("HIGH:")
             for f in high:
                 print(f"   [{f['timestamp']}] {f['type']}: {f['details']}")
             print()
         
         if medium:
-            print("🟡 MEDIUM:")
+            print("MEDIUM:")
             for f in medium:
                 print(f"   [{f['timestamp']}] {f['type']}: {f['details']}")
             print()
         
-        # Рекомендации
+        # Recommendations
         print("=" * 80)
-        print("📋 РЕКОМЕНДАЦИИ:")
+        print("RECOMMENDATIONS:")
         print()
         if critical:
-            print("1. 🚨 НЕМЕДЛЕННО: Изолировать скомпрометированные хосты")
-            print("2. 🔒 Заблокировать подозрительные IP на firewall")
-            print("3. 🔍 Провести форензик анализ затронутых систем")
+            print("1. IMMEDIATE: Isolate compromised hosts")
+            print("2. Block suspicious IPs on firewall")
+            print("3. Conduct forensic analysis of affected systems")
         if high:
-            print("4. ⏰ В течение часа: Сменить пароли пользователей")
-            print("5. 📊 Проверить логи на других хостах")
+            print("4. Within 1 hour: Reset user passwords")
+            print("5. Check logs on other hosts")
         print()
         
     else:
-        print("✅ Подозрительных событий не обнаружено")
+        print("No suspicious events found")
     
     print("=" * 80)
-    print(f"✅ Анализ завершен ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')})")
+    print(f"Analysis completed ({datetime.now().strftime('%Y-%m-%d %H:%M:%S')})")
     print("=" * 80)
 
 if __name__ == "__main__":
