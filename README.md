@@ -121,28 +121,12 @@ Kill chain R&D, skipping the theory fluff. Self-paced, competency-based. Why? To
 
 ---
 
-## Case Studies
-
-Real incidents. Real playbooks. Real detection rules.
-
-**Coming Soon:** Documentation of actual SOC operations from EnergyLogic AI.
-
----
-
 ## Contact
 
 **Location:** Los Angeles, CA  
 **Email:** artemkhludov@gmail.com  
 **LinkedIn:** [linkedin.com/in/artem-khludov](https://linkedin.com/in/artem-khludov)  
 **GitHub:** [@ArtemKhludov](https://github.com/ArtemKhludov)
-
----
-
-## Vibe Check
-
-I'm not here to sell you "success." I'm here to talk shop with people who get it. If you're dealing with real security problems—not PowerPoint slides—let's talk.
-
-LA chill. Technically sharp. Zero corporate BS.
 
 ---
 
